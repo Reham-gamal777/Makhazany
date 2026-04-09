@@ -1,0 +1,44 @@
+{
+  "items": [
+    {
+      "id": "1250",
+      "exportNumber": 1250,
+      "clientName": "شركة النور للتوريدات",
+      "exportDate": "2026-03-27",
+      "amount": 2500.0,
+      "currency": "ج.م"
+    },
+    {
+      "id": "1251",
+      "exportNumber": 1251,
+      "clientName": "مؤسسة الأمل التجارية",
+      "exportDate": "2026-03-27",
+      "amount": 4200.5,
+      "currency": "ج.م"
+    },
+    {
+      "id": "1252",
+      "exportNumber": 1252,
+      "clientName": "مخازن الهدى",
+      "exportDate": "2026-03-26",
+      "amount": 1150.0,
+      "currency": "ج.م"
+    },
+    {
+      "id": "1253",
+      "exportNumber": 1253,
+      "clientName": "محلات التوحيد",
+      "exportDate": "2026-03-26",
+      "amount": 8900.0,
+      "currency": "ج.م"
+    },
+    {
+      "id": "1254",
+      "exportNumber": 1254,
+      "clientName": "شركة الوفاء",
+      "exportDate": "2026-03-25",
+      "amount": 2700.0,
+      "currency": "ج.م"
+    }
+  ]
+}

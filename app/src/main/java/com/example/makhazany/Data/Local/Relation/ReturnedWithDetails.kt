@@ -1,12 +1,11 @@
-package com.example.makhazany.Data.Local.Relation
+package com.example.makhazany.data.local.relation
 
 import androidx.room.Embedded
 import androidx.room.Relation
-import com.example.makhazany.Data.Local.Entity.ReturnedDetailsEntity
-import com.example.makhazany.Data.Local.Entity.ReturnedEntity
+import com.example.makhazany.data.local.entity.ReturnedDetailsEntity
+import com.example.makhazany.data.local.entity.ReturnedEntity
 
 data class ReturnedWithDetails(
-
     @Embedded
     val returned: ReturnedEntity,
 

@@ -1,12 +1,11 @@
-package com.example.makhazany.Data.Local.Relation
+package com.example.makhazany.data.local.relation
 
 import androidx.room.Embedded
 import androidx.room.Relation
-import com.example.makhazany.Data.Local.Entity.OutboundDetailsEntity
-import com.example.smartstock.Data.Local.Entity.OutboundEntity
+import com.example.makhazany.data.local.entity.OutboundDetailsEntity
+import com.example.makhazany.data.local.entity.OutboundEntity
 
 data class OutboundWithDetails(
-
     @Embedded
     val outbound: OutboundEntity,
 

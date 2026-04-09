@@ -1,4 +1,4 @@
-package com.example.smartstock.Data.Local.Entity
+package com.example.makhazany.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
@@ -18,15 +18,10 @@ import androidx.room.PrimaryKey
     indices = [Index("itemId")]
 )
 data class InboundEntity(
-
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-
     val itemId: Int,
-
     val amount: Int,
-
     val inboundDate: Long,
-
     val isSynced: Boolean = false
 )

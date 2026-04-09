@@ -1,10 +1,9 @@
-package com.example.makhazany.Data.Local.Entity
+package com.example.makhazany.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
 import androidx.room.Index
 import androidx.room.PrimaryKey
-import com.example.makhazany.Data.roomDatabase.CustomerEntity
 
 @Entity(
     tableName = "returned",
@@ -19,17 +18,11 @@ import com.example.makhazany.Data.roomDatabase.CustomerEntity
     indices = [Index("customerId")]
 )
 data class ReturnedEntity(
-
     @PrimaryKey(autoGenerate = true)
     val id: Int = 0,
-
     val customerId: Int,
-
     val returnedDate: Long,
-
     val userId: String,
-
     val latitude: Double,
-
     val longitude: Double
 )

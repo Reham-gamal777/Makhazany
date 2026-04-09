@@ -1,22 +1,16 @@
-package com.example.makhazany.Data.Local.Dao
+package com.example.makhazany.data.local.dao
 
 import androidx.room.Dao
 import androidx.room.Insert
 import androidx.room.OnConflictStrategy
 import androidx.room.Query
-import com.example.smartstock.Data.Local.Entity.StockEntity
+import com.example.makhazany.data.local.entity.StockEntity
 
 @Dao
 interface StockDao {
-
     @Insert(onConflict = OnConflictStrategy.REPLACE)
-    suspend fun insertStock(
-        stock: StockEntity
-    )
+    suspend fun insertStock(stock: StockEntity)
 
     @Query("SELECT * FROM stocks WHERE itemId = :itemId")
-    suspend fun getStockByItem(
-        itemId: Int
-    ): StockEntity?
-
+    suspend fun getStockByItem(itemId: Int): StockEntity?
 }

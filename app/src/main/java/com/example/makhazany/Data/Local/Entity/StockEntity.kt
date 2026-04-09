@@ -1,4 +1,4 @@
-package com.example.smartstock.Data.Local.Entity
+package com.example.makhazany.data.local.entity
 
 import androidx.room.Entity
 import androidx.room.ForeignKey
