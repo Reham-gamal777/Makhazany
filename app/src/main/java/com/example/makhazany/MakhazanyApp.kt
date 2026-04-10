@@ -1,7 +1,2 @@
-package com.example.makhazany
-
-import android.app.Application
-import dagger.hilt.android.HiltAndroidApp
-
-@HiltAndroidApp
-class MakhazanyApp : Application()
+// This file was redundant and removed to avoid Hilt conflicts.
+// See MakhazanyApplication.kt

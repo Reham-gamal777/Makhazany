@@ -1,8 +1,8 @@
-package com.example.makhazany.Data.RepositoryImpl
+package com.example.makhazany.data.repository
 
-import com.example.makhazany.Data.Local.Dao.CustomerDao
-import com.example.makhazany.Data.Local.Entity.CustomerEntity
-import com.example.makhazany.Domain.Repository.CustomerRepository
+import com.example.makhazany.data.local.dao.CustomerDao
+import com.example.makhazany.data.local.entity.CustomerEntity
+import com.example.makhazany.domain.repository.CustomerRepository
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 

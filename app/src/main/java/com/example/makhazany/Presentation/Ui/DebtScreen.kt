@@ -1,4 +1,4 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -19,8 +19,8 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
+import com.example.makhazany.data.local.entity.CustomerEntity
 import com.example.makhazany.ui.theme.*
-import com.example.makhazany.Data.Local.Entity.CustomerEntity
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable

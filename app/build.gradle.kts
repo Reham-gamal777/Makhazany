@@ -34,11 +34,11 @@ android {
         sourceCompatibility = JavaVersion.VERSION_11
         targetCompatibility = JavaVersion.VERSION_11
     }
-    kotlinOptions {
-        jvmTarget = "11"
-    }
     buildFeatures {
         compose = true
+    }
+    kotlinOptions {
+        jvmTarget = "11"
     }
 }
 
@@ -54,18 +54,15 @@ dependencies {
     implementation(libs.androidx.compose.material3)
     implementation(libs.androidx.compose.material.icons.extended)
 
-    // Icons
-    implementation("androidx.compose.material:material-icons-extended")
-
     // Serialization
     implementation(libs.kotlinx.serialization.json)
 
-    // Room - Standard Stable Version
+    // Room
     implementation(libs.androidx.room.runtime)
     implementation(libs.androidx.room.ktx)
     ksp(libs.androidx.room.compiler)
 
-    // Hilt - Dependency Injection
+    // Hilt
     implementation(libs.hilt.android)
     implementation("androidx.hilt:hilt-navigation-compose:1.2.0")
     ksp(libs.hilt.compiler)

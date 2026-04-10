@@ -1,9 +1,9 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.makhazany.Domain.Repository.CustomerRepository
-import com.example.makhazany.Data.Local.Entity.CustomerEntity
+import com.example.makhazany.domain.repository.CustomerRepository
+import com.example.makhazany.data.local.entity.CustomerEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

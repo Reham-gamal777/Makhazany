@@ -23,5 +23,7 @@ data class InboundEntity(
     val itemId: Int,
     val amount: Int,
     val inboundDate: Long,
+    val pricePerUnit: Double = 0.0,
+    val invoiceNumber: String = "",
     val isSynced: Boolean = false
 )

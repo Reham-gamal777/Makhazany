@@ -1,6 +1,6 @@
-package com.example.makhazany.Domain.Repository
+package com.example.makhazany.domain.repository
 
-import com.example.makhazany.Data.Local.Entity.CustomerEntity
+import com.example.makhazany.data.local.entity.CustomerEntity
 import kotlinx.coroutines.flow.Flow
 
 interface CustomerRepository {

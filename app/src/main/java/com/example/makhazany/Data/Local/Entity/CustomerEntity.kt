@@ -11,5 +11,7 @@ data class CustomerEntity(
     val customerName: String,
     val customerNum: Int,
     val customerDebt: Double,
+    val customerType: String = "",
+    val address: String = "",
     val isSynced: Boolean
 )

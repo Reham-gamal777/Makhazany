@@ -1,11 +1,11 @@
-package com.example.makhazany.Data.RepositoryImpl
+package com.example.makhazany.data.repository
 
-import com.example.makhazany.Data.Local.Dao.ItemDao
-import com.example.makhazany.Data.Local.Dao.StockDao
-import com.example.makhazany.Data.Local.Relation.ItemWithStock
-import com.example.makhazany.Domain.Repository.StockRepository
-import com.example.makhazany.Data.Local.Entity.ItemEntity
-import com.example.makhazany.Data.Local.Entity.StockEntity
+import com.example.makhazany.data.local.dao.ItemDao
+import com.example.makhazany.data.local.dao.StockDao
+import com.example.makhazany.data.local.relation.ItemWithStock
+import com.example.makhazany.domain.repository.StockRepository
+import com.example.makhazany.data.local.entity.ItemEntity
+import com.example.makhazany.data.local.entity.StockEntity
 import kotlinx.coroutines.flow.Flow
 import javax.inject.Inject
 
@@ -14,7 +14,7 @@ class StockRepositoryImpl @Inject constructor(
     private val stockDao: StockDao
 ) : StockRepository {
     override fun getItemsWithStock(): Flow<List<ItemWithStock>> {
-        return itemDao.getItemsWithStock()
+        return itemDao.getAllItems()
     }
 
     override suspend fun getStockByItem(itemId: Int): StockEntity? {

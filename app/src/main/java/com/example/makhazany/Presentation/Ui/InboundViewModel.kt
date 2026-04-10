@@ -1,9 +1,9 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.makhazany.Data.Local.Entity.InboundEntity
-import com.example.makhazany.Domain.Repository.InboundRepository
+import com.example.makhazany.domain.repository.InboundRepository
+import com.example.makhazany.data.local.entity.InboundEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.*
 import kotlinx.coroutines.launch

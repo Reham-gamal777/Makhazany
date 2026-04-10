@@ -1,8 +1,8 @@
-package com.example.makhazany.Domain.Repository
+package com.example.makhazany.domain.repository
 
-import com.example.makhazany.Data.Local.Entity.ItemEntity
-import com.example.makhazany.Data.Local.Relation.ItemWithStock
-import com.example.makhazany.Data.Local.Entity.StockEntity
+import com.example.makhazany.data.local.relation.ItemWithStock
+import com.example.makhazany.data.local.entity.ItemEntity
+import com.example.makhazany.data.local.entity.StockEntity
 import kotlinx.coroutines.flow.Flow
 
 interface StockRepository {

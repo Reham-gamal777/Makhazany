@@ -1,9 +1,9 @@
-package com.example.makhazany.Data.Local.Relation
+package com.example.makhazany.data.local.relation
 
 import androidx.room.Embedded
 import androidx.room.Relation
-import com.example.makhazany.Data.Local.Entity.ItemEntity
-import com.example.makhazany.Data.Local.Entity.StockEntity
+import com.example.makhazany.data.local.entity.ItemEntity
+import com.example.makhazany.data.local.entity.StockEntity
 
 data class ItemWithStock(
     @Embedded val item: ItemEntity,

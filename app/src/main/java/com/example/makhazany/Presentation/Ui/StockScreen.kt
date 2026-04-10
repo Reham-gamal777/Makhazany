@@ -1,4 +1,4 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable
@@ -20,8 +20,10 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.makhazany.Data.Local.Relation.ItemWithStock
+import com.example.makhazany.data.local.relation.ItemWithStock
+import com.example.makhazany.data.local.entity.ItemEntity
 import com.example.makhazany.ui.theme.*
+
 
 @OptIn(ExperimentalMaterial3Api::class)
 @Composable
@@ -124,7 +126,7 @@ fun StockScreen(
                             leadingIcon = { Icon(Icons.Default.Search, contentDescription = null, modifier = Modifier.size(16.dp)) }
                         )
                     }
-                    
+
                     Spacer(modifier = Modifier.height(16.dp))
 
 
@@ -171,7 +173,7 @@ fun StockListItem(
 ) {
     val item = itemWithStock.item
     val stock = itemWithStock.stock
-    
+
     Column(modifier = Modifier.clickable { onItemClick(item.id, item.name) }) {
         Row(
             modifier = Modifier.fillMaxWidth().padding(vertical = 12.dp),
@@ -188,7 +190,7 @@ fun StockListItem(
                 Spacer(modifier = Modifier.width(8.dp))
                 Column {
                     Text(item.name, fontSize = 14.sp, fontWeight = FontWeight.Bold)
-                    Text("SKU: ${item.sku}", fontSize = 10.sp, color = TextGray)
+                    Text("SKU: ${item.sku ?: "N/A"}", fontSize = 10.sp, color = TextGray)
                 }
             }
             Text(item.category ?: "عام", modifier = Modifier.weight(1f), fontSize = 12.sp, textAlign = TextAlign.Center, color = TextGray)

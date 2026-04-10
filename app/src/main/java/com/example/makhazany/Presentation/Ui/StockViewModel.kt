@@ -1,11 +1,11 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.example.makhazany.Data.Local.Relation.ItemWithStock
-import com.example.makhazany.Data.Local.Entity.ItemEntity
-import com.example.makhazany.Data.Local.Entity.StockEntity
-import com.example.makhazany.Domain.Repository.StockRepository
+import com.example.makhazany.data.local.relation.ItemWithStock
+import com.example.makhazany.domain.repository.StockRepository
+import com.example.makhazany.data.local.entity.ItemEntity
+import com.example.makhazany.data.local.entity.StockEntity
 import dagger.hilt.android.lifecycle.HiltViewModel
 import kotlinx.coroutines.flow.MutableStateFlow
 import kotlinx.coroutines.flow.StateFlow

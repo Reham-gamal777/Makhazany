@@ -1,4 +1,4 @@
-package com.example.makhazany.Presentation.Ui
+package com.example.makhazany.presentation.ui
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -16,8 +16,8 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
-import com.example.makhazany.Data.Local.Entity.InboundEntity
 import com.example.makhazany.ui.theme.*
+import com.example.makhazany.data.local.entity.InboundEntity
 import java.text.SimpleDateFormat
 import java.util.*
 
