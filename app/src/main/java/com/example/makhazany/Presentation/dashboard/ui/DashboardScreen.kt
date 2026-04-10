@@ -20,7 +20,8 @@ import com.example.makhazany.presentation.dashboard.viewmodel.DashboardViewModel
 fun DashboardScreen(
     viewModel: DashboardViewModel,
     onNavigateToExports: () -> Unit,
-    onNavigateToImports: () -> Unit
+    onNavigateToImports: () -> Unit,
+    onNavigateToStock: () -> Unit
 ) {
     val uiState by viewModel.uiState.collectAsStateWithLifecycle()
 
@@ -57,6 +58,7 @@ fun DashboardScreen(
                                     onClick = when (item.id) {
                                         1 -> onNavigateToExports
                                         2 -> onNavigateToImports
+                                        4 -> onNavigateToStock
                                         else -> null
                                     }
                                 )

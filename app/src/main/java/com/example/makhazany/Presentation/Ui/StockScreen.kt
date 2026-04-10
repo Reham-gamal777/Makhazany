@@ -29,7 +29,8 @@ import com.example.makhazany.ui.theme.*
 @Composable
 fun StockScreen(
     viewModel: StockViewModel,
-    onItemClick: (Int, String) -> Unit
+    onItemClick: (Int, String) -> Unit,
+    onBack: () -> Unit
 ) {
     val stockItems by viewModel.stockItems.collectAsState()
     val totalItems by viewModel.totalItems.collectAsState()
@@ -39,7 +40,7 @@ fun StockScreen(
         topBar = {
             TopAppBar(
                 title = { Text("المخازن", modifier = Modifier.fillMaxWidth(), textAlign = TextAlign.Center) },
-                navigationIcon = { IconButton(onClick = {}) { Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null) } },
+                navigationIcon = { IconButton(onClick = onBack) { Icon(Icons.AutoMirrored.Filled.ArrowForward, contentDescription = null) } },
                 actions = { IconButton(onClick = {}) { Icon(Icons.Default.Menu, contentDescription = null) } },
                 colors = TopAppBarDefaults.topAppBarColors(containerColor = Color.White)
             )

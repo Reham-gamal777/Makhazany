@@ -4,6 +4,7 @@ import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
 import androidx.activity.enableEdgeToEdge
+import androidx.hilt.navigation.compose.hiltViewModel
 import androidx.compose.runtime.*
 import com.example.makhazany.core.theme.DashboardTheme
 import com.example.makhazany.data.local.LocalDataSource
@@ -13,12 +14,15 @@ import com.example.makhazany.features.exports.presentation.ExportsRouteWithNavig
 import com.example.makhazany.features.imports.presentation.ImportsNavigation
 import com.example.makhazany.presentation.dashboard.ui.DashboardScreen
 import com.example.makhazany.presentation.dashboard.viewmodel.DashboardViewModel
+import com.example.makhazany.presentation.ui.StockScreen
+import com.example.makhazany.presentation.ui.StockViewModel
 import dagger.hilt.android.AndroidEntryPoint
 
 sealed class NavigationState {
     object Dashboard : NavigationState()
     object Exports : NavigationState()
     object Imports : NavigationState()
+    object Stock : NavigationState()
 }
 
 @AndroidEntryPoint
@@ -48,6 +52,9 @@ class MainActivity : ComponentActivity() {
                             },
                             onNavigateToImports = {
                                 navigationState = NavigationState.Imports
+                            },
+                            onNavigateToStock = {
+                                navigationState = NavigationState.Stock
                             }
                         )
                     }
@@ -61,6 +68,16 @@ class MainActivity : ComponentActivity() {
                     NavigationState.Imports -> {
                         ImportsNavigation(
                             onBackToMain = {
+                                navigationState = NavigationState.Dashboard
+                            }
+                        )
+                    }
+                    NavigationState.Stock -> {
+                        val stockViewModel: StockViewModel = hiltViewModel()
+                        StockScreen(
+                            viewModel = stockViewModel,
+                            onItemClick = { _, _ -> },
+                            onBack = {
                                 navigationState = NavigationState.Dashboard
                             }
                         )
